@@ -1,0 +1,143 @@
+#div1{
+    
+    
+}
+#div2{
+    
+    
+}
+#div3{
+    
+    
+}
+#div4{
+    
+    
+}
+
+#buttonDiv{
+    
+}
+
+img:hover {
+    box-shadow: 
+    
+}
+
+.flex-item {
+  
+    margin:5px;
+}
+
+.flex-box {
+    
+}
+
+.flex_container {
+    display: -webkit-flex;
+    display: flex;
+/*
+    margin: auto;
+    align-content: center;
+*/
+    justify-content: center;
+}
+
+#intro {
+    font-family: 'Fjalla One', 'Arial';
+    padding-top: 360px;
+}
+
+#pageHead {
+    color: white;
+}
+
+#regetMessage {
+    font-size: 12px;
+}
+
+#regetNews {
+    background-color: white;
+    height: 50px;
+    width: 130.9px;
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+    box-shadow: 0px -3px 10px -2px darkgrey;
+    
+    transition: background-color 1s, width 1s, height 1s, padding 1s, font-size 1s, box-shadow 1s;;
+}
+
+#regetNews:hover {
+    background-color: #33A560;
+    height: 60px;
+    width: 157.08px;
+    padding: 18px;
+    font-size: 18px;
+    box-shadow: 0px -8px 20px -10px #ABE3C3;
+}
+
+#location {
+    font-family: 'Fjalla One', 'Arial';
+}
+
+#NYTlogo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#getNews {
+    background-color: #ACFFD0;
+    height: 50px;
+    width: 130.9px;
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+    box-shadow: 0px -3px 10px -2px darkgrey;
+    
+    transition: background-color 1s, width 1s, height 1s, padding 1s, font-size 1s, box-shadow 1s;
+}
+
+#getNews:hover {
+    background-color: #33A560;
+    height: 60px;
+    width: 157.08px;
+    padding: 18px;
+    font-size: 18px;
+    box-shadow: 0px -8px 20px -10px darkgrey;
+}
+
+#missionStatement {
+    text-align: center;
+    font-family: 'Fjalla One', 'Arial';
+    padding: 60px;
+    position: absolute;
+    background-color: #33A560;
+    color: #E2E2E2;
+    min-width: 640px;
+}
+
+select#dropInput {
+    align-self: center;
+    margin: auto;
+    height: 70px;
+    font-family: 'Fjalla One', 'Arial';
+}
+
+.input {
+    height: 30px;
+}
+
+.textbox {
+    text-align: center;
+    
+}
+
+#line {
+    min-width: 500px;
+}
+#fileInput {
+    text-align: center;
+    align-content: center;
+}

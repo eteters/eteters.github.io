@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Elliot Goodman, Chris Mitchell, Evan Teters, Lydia Snyder">
+
+    <title>Excusify</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Yatra+One" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    
+     <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    
+    <!-- Clarifai -->
+    
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-1.2.1.js"></script>
+    <script>
+    Clarifai.initialize( {
+        'clientId': '7nQddHKXJEgd8KphQzJoJUE0x2fhUPlb2ipqSrvt',
+        'clientSecret': 'TYvm_QKaO-Z32_V-8TcTZOl25JtBJ8gAwAJFOjSG'
+        
+    }) 
+       "Authorization: Bearer XgqNqIswxXGkjKd56XjF8PO9xqw8gj"
+        
+        var access_token = "XgqNqIswxXGkjKd56XjF8PO9xqw8gj";
+
+    </script>
+
+
+</head>
+
+
+    <script>
+        
+        
+            
+        
+        $(function(){
+            
+            var getNews = function(){
+                
+                var e = document.getElementById("dropInput");
+                var a = e.options[e.selectedIndex].text;
+                
+                var b = document.getElementById('event').value;
+                
+                if (b === undefined || b === null) {
+                    /*alert("input 2");*/
+                }
+                /*alert("1 alerts work...");*/
+                
+                var c = document.getElementById('keyword').value;
+                
+                
+                
+                /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+                /*alert("1.5");*/
+                var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+                    url += '?' + $.param({
+                    'api-key': "77d19d25eb264701926b73ecdf70d56f",
+                    'q': c,
+                    'fl': "lead_paragraph,headline,keywords"
+                    });
+                /*alert("1.75");*/
+                /*var article = Math.floor((Math.random() * 9) + 1);*/
+                var article = 1;
+                var results = 0;
+                /*alert("1.77");*/
+                var success = function(data){
+                    /*alert("1.8");*/
+                    var d = data.response.docs[article];
+                    if( d === undefined || d === null){
+                        /*alert("special");*/
+                        d = "There are no good excuses we can find for that keyword. ";
+                        results = 0;
+                        /*alert("1.83");*/
+                    } else {
+                        article = 20;
+                        d = data.response.docs[article];
+                        while( d === undefined || d === null ) {
+                            article--;
+                            d = data.response.docs[article];
+                            /*alert("1.85");*/
+                        }
+                        results = article;
+                        
+                    
+                        
+                        
+                        
+                    }//end else for if there's no entry in the API for a given index for that given keyword
+                        
+                    
+                    
+                    if(results > 0) {
+                        article = Math.floor((Math.random() * results) + 1);
+                        d = data.response.docs[article].lead_paragraph;
+                        /*alert("2.1");*/
+                    }
+                    
+                    var words = d.split(" ");
+                    /*alert("2.2");*/
+                    
+                    firstLetter = d[0].toLowerCase();
+                    d = d.slice(1, d.length);
+                    while( words[0] == "What" || 
+                          words[0] == "Who" || 
+                          words[0] == "Where" || 
+                          words[0] == "When" || 
+                          words[0] == "Why" || 
+                          words[0] == "How" || 
+                          words[0] == "Have" || 
+                          words[0] == "Which") {
+                        article = Math.floor((Math.random() * results) + 1);
+                        d = data.response.docs[article].lead_paragraph;
+                        words = d.split(" ");
+                        firstLetter = d[0].toLowerCase();
+                        d = d.slice(1, d.length);
+                        /*alert("filtering question");*/
+                    }
+                    var sentences = d.split(". ");
+                    
+                    document.getElementById("loc").innerHTML = "";
+                
+                    document.getElementById("loc").innerHTML = document.getElementById("loc").innerHTML + a + " " + b + " because ";
+                    
+                    document.getElementById("loc").innerHTML = document.getElementById("loc").innerHTML + firstLetter + sentences[0] + ".";
+                    /*alert("finished");*/
+                };
+                $.get({
+                    dataType: "json",
+                    "url": url,
+                    "success": success
+                })
+            }
+            $("#getNews").on("click", getNews);
+            $("#regetNews").on("click", getNews);
+            
+            
+                   // CLARIFAI + IMAGES -->
+        
+        var img = Math.floor((Math.random() * 500));
+            var i1 = "https://unsplash.it/315/105/?image=" + img;
+             img = Math.floor((Math.random() * 500));
+            var i2 = "https://unsplash.it/115/105/?image=" + img;
+             img = Math.floor((Math.random() * 500));
+            var i3 = "https://unsplash.it/165/105/?image=" + img;
+             img = Math.floor((Math.random() * 500));
+            var i4 = "https://unsplash.it/265/105/?image=" + img;
+            
+            
+            document.getElementById('div1').src = i1;
+            document.getElementById('div2').src = i2;
+            document.getElementById('div3').src = i3;
+            document.getElementById('div4').src = i4;
+            
+            $("#div1").on("click", function(){
+                          clarifai(i1);
+                          });
+            $("#div2").on("click", function(){
+                clarifai(i2);
+            });
+            $("#div3").on("click", function(){
+                clarifai(i3);
+            });
+            $("#div4").on("click", function(){
+                clarifai(i4);
+            });
+            
+            var key = '';
+            function clarifai(urla) {
+                
+                Clarifai.getTagsByUrl(urla).then(
+                (response)=>{
+                    console.log('the response is ', response.results[0].result.tag.classes);
+                    
+                    key = response.results[0].result.tag.classes[0];
+                    document.getElementById("keyword").value = key;
+                },
+                    (error)=> {
+                    console.log(error);
+                    }
+                    );
+                
+                
+            
+            }
+        });
+        
+            
+
+        
+        // PARSING -->
+        
+        var parseTitle = function() {
+            var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+                    url += '?' + $.param({
+                    'api-key': "77d19d25eb264701926b73ecdf70d56f",
+                    'q': b,
+                    'fl': "lead_paragraph,headline,keywords"
+                    });
+                var article = Math.floor((Math.random() * 9) + 1);
+                $.get({
+                    dataType: "json",
+                    "url": url,
+                    /*"success": success*/
+                })
+        };
+    </script>
+    
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div id="missionStatement">
+        <h1 id="pageHead">Welcome to Excusify!</h1>
+        <p>
+            Here at Team Excusify, we understand that you're a busy individual, and sometimes, you just can't find the time for every obligation you may have on your schedule. Fortunately, we've got your back by allowing you to have the most relevant and believable excuses at your fingertips. By simply entering some information to customize your excuse, you'll be effectively managing your schedule in no time.
+        <p>
+    </div>
+
+<!--     Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Get an Excuse!</h1><br>
+                    
+<!--             Text Input -->
+                    <form action="#" method="get">
+            <div>
+<!--
+                <label for="user"> Location:</label>
+                <input id= "user" type="text" name = "location" Placeholder="" maxlength="10">
+-->
+            </div>
+                  <div id="line">     
+                    <select id="dropInput" class="input" name="dropdown">
+                        <option value="1">I will be late to</option>
+                        <option value="2">I have to reschedule</option>
+                        <option value="3">I can't make it to</option>
+                        <option value="4">I might miss</option>
+                        <option value="5">I have to cancel</option>
+                    </select>
+                        
+                    <input id="event" class="textbox input" type="text" name="event" value="" placeholder="unimportant event">
+                        <span>because</span>
+                    <input id="keyword" class="textbox input" type="text" name="keyword" value="" placeholder="keyword"><br><br>
+                        </div>
+                    <a type="submit" class="btn btn-default page-scroll" href="#location" id="getNews" value="Submit Location">Get your excuse</a>
+                        
+                    </form>
+                    
+            <div class="flex_container"width=auto>
+            <div class="flex-item"  width= 75% height = 50%><a href="#"><img id="div1"></a></div>
+            <div class="flex-item"  width= 25% height = 50%><a href="#"><img id="div2"></a></div>
+        </div>
+        <div class="flex_container" width= auto>
+            <div class="flex-item"  width= 25% height = 50%><a href="#"><img id="div3" ></a></div>
+            <div class="flex-item"  width = 75% height = 50%><a href="#"><img id="div4"></a></div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+
+    
+    <section id="location" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Your Excuse</h1>
+                    <!-- THIS IS WHERE THE MAGIC HAPPENS -->
+                    <div id="loc">To generate an excuse, enter information into the fields above, and then let Excusify work its magic...</div>
+                </div>
+            </div>
+        </div><br><br><br>
+        <p id="regetMessage">
+            Not satisfied with this fantastic excuse?
+        </p>
+        <a type="submit" class="btn btn-default page-scroll" href="#location" id="regetNews" value="Submit Location">Get another one</a>
+    </section>
+    <a href="http://developer.nytimes.com">
+    <img src="poweredby_nytimes_200a.png" id="NYTlogo" alt="Data provided by The New York Times">
+    </a>
+   
+    <!--  JS   -->
+<!--<a href="https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=ee5b04ab144f438cacb4e0d7cdbd46df"></a>-->
+
+
+   
+</body>
+
+</html>
