@@ -45,8 +45,7 @@
 }
 
 .icon {
-    width: 50%;
-    height: 50%;
+    width: 100%;
 /*    position: absolute;*/
 }
 
@@ -104,4 +103,6 @@ body{
 .collapse {
     background-color: #eee;
 }
+
+
 
