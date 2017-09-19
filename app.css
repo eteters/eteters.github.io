@@ -46,6 +46,7 @@
 
 .icon {
     width: 100%;
+
 /*    position: absolute;*/
 }
 
@@ -59,7 +60,7 @@
 #excButton{
   background-color: #eee;
     box-shadow: 0px -3px 10px -2px darkgrey;
-    
+
 transition: background-color 1s, width 1s, height 1s, padding 1s, font-size 1s, box-shadow 1s;
 }
 #excButton:hover {
@@ -69,10 +70,10 @@ transition: background-color 1s, width 1s, height 1s, padding 1s, font-size 1s, 
 }
 
 .sloth{
-    
+
     height: 80%;
     width: 80%;
-    
+
 }
 #brand{
     max-height: 230%;
@@ -90,7 +91,7 @@ body{
 .navbar-brand {
     display: flex;
     align-items: center;
-    
+
 }
 
 .panel {
@@ -103,6 +104,13 @@ body{
 .collapse {
     background-color: #eee;
 }
+.info {
+    background-color: #eee;
+    border-radius: 5%;
+    margin: 2px;
 
 
-
+}
+.holdpic{
+    height: 375px;
+}
