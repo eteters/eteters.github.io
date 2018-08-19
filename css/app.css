@@ -103,4 +103,7 @@ section{
     font-size: 1.25rem;
       position: inherit;
 	}
+    nav .sidenav-trigger{
+        margin: 0px 8px;
+    }
 }
