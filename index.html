@@ -1,400 +1,326 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+<!-- Compiled and minified CSS -->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/app.css" />
+        <!-- Compiled and minified JavaScript -->
+         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
 
-<html>
-<head>
-	<title>Evan Teters</title>
+        <script src="app.js"></script>
+        
+    
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+          $('.scrollspy').scrollSpy();
+      });
+    </script>
+    </head>
 
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Evan Teters">
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Scrolling Nav CSS-->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="app.css" rel="stylesheet" type="text/css">
-     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!--  Scrolling nav JS      -->
-    <script src="js/scrolling-nav.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
-    <style>
-
-
-
-    </style>
-
-
-
-</head>
     <body>
-
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#main">
-
-                    <img class="img-responsive img-circle" id="brand" alt="Evan" src="img/evan.jpg">    <p> Evan Teters</p>
-
-                </a>
+       <nav class="hide-on-large-only z-depth-1 ">
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                <i class="material-icons orange-text text-lighten-1">menu</i>
+            </a>
+            <div class="name-title">
+                <a id="name" href="#about" class="orange-text lighten-1">Evan Teters</a>
+                <span class="white-text light">Mobile Developer and Entrepreneur</span>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                     <li>
-                        <a class="page-scroll" href="#work">My Skills</a>
-                    </li>
-<!--
-                    <li>
-                        <a class="page-scroll" href="#creative">Creativity</a>
-                    </li>
--->
-                    <li>
-                        <a class="page-scroll" href="#about">About/Contact</a>
-                    </li>
-<!--
-                    <li id="excusifyTab">
-                        <a  href="" target="_blank"> Excusify</a>
-                    </li>
--->
-
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-  <!--  <div class="container">
-        <section id="main">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1>Who am I?</h1>
-
-
-                    <div id="carousel" class="jumbotron carousel slide" data-ride="carousel" data-interval="2500">
-                          <!-- Indicators -->
-<!--
-                          <ol class="carousel-indicators">
-                            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel" data-slide-to="1"></li>
-                            <li data-target="#carousel" data-slide-to="2"></li>
-                          </ol>
-
-                           Wrapper for slides
-                          <div class="carousel-inner">
-                            <div class="item active">
-                              <h1>I am Evan</h1>
-
-                            </div>
-                            <div class="item">
-                              <h1>I am Curious</h1>
-
-                            </div>
-                            <div class="item">
-                              <h1>I am Creative</h1>
-
-                            </div>
-                          </div>
-
-
-                          <!-- Controls -->
-<!--                          <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">-->
-<!--                            <span class="glyphicon glyphicon-chevron-left"></span>-->
-<!--
-                          </a>
-                          <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
--->
-<!--                            <span class="glyphicon glyphicon-chevron-right"></span>-->
-<!--                          </a>-->
-<!--                        </div>  Carousel -->
-
-<!--                </div>-->
-        <!--  /ROW-->
-<!--            </div>-->
-<!--
-            <div class="row">
-
-                <div class="col-xs-6 col-xs-offset-3 text-center">
-
-                    <a class="btn btn-default page-scroll" href="#work"><span class="glyphicon glyphicon-arrow-down"></span>Find Out more!<span class="glyphicon glyphicon-arrow-down"></span></a>
-
+        </nav>
+        
+        <ul id="nav-mobile" class="sidenav sidenav-fixed blue-grey darken-1">
+            <li>
+                <div class="user-view ">
+                  <a href=""><img class="circle responsive-img" src="img/evan%20photo.jpg"></a>
+                    <span class="navName orange-text text-lighten-1"><a href="#about">Evan Teters</a></span>
+                    <br>
+                  <span class="navTitle white-text">Mobile Developer Aspiring Entrepreneur</span>
                 </div>
+            </li>
+              <li><a class="waves-effect waves-orange" href="#about">About</a></li>
+              <li><a class="waves-effect waves-orange" href="#experience">Experience</a></li>
+              <li><a class="waves-effect waves-orange" href="#skills">Skills</a></li>
+<!--              <li><a href="#projects">Projects</a></li>-->
+              <li><a class="waves-effect waves-orange" href="#education">Education</a></li>
+              <li><a class="waves-effect waves-orange" href="#contact">Contact</a></li>
+              <li><a class="waves-effect waves-orange" href="#!">Resume</a></li>
+            </ul>
+        
+        
 
-            </div>
--->
-<!--        /Section    -->
-        </section>
-
-<!--        /container-->
-    </div> -->
-<!--        SKILLS SECTION-->
-        <div class="container">
-
-        <!-- /.row -->
-
-            <section id="work">
-                <div class="row">
-
-                    <div class="col-lg-12 text-center">
-                    <h1>My Skills</h1>
-
+        <main class="blue-grey lighten-3">
+                <section id="about" class="section scrollspy full-height">
+                    <h3 class="page-title blue-grey"> About</h3>
+                    <div class="container ">
+                    <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey ">
+                        <div class="card-content white-text">
+                          <span class="card-title">Mobile Developer and Aspiring Entrepreneur</span>
+                          <p>My desire to learn has led me to development in a number of different environments. From one project to the next, I have found a passion for collaborating with others to bring exciting applications to life.  </p>
+                        </div>
+                      </div>
                     </div>
-
-                </div>
-
-
-                <div class="row text-center">
-
-                    <div class="col-sm-4">
-
-                            <div class="skills-box" id="clang">
-
-                                <p>C</p>
-                                <div class="holdpic">
-                                    <img class="icon" src="img/clang.png" alt="The C Language">
+                    </div> 
+                    </div>
+                </section>
+                <section id="experience" class="section scrollspy">
+                    <h3 class="page-title blue-grey"> Experience</h3>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Service Management Group</span>
+                                    <span class="role"> Full Stack Web Development </span>
+                                    <em>Rapidly growing tech-focused marketing consultant in Kansas City, focused on deriving insights from survey data for big clients across muliple industries.</em>
+                                    <br>
+                                    C#, AngularJS, SQL Server, Less <br>
+                                    September 2017 - May 2018 
+                                    <h6>Development</h6>
+                                    <ul>
+                                        <li>Worked with a team focusing on the new client facing website offering reports generated from survey and social data</li>
+                                        <li>Wrote SQL Stored Procedures and significantly modified existing systems to migrate data from Hive to SQL, allowing for better write-only performance from Hive and read-only performance in SQL</li>
+                                        <li>Worked with another team member to build a new app allowing internal researchers to use new libraries generated with machine learning</li>
+                                        <li>Overhauled Google Analytics across the whole website to be more user-friendly and useful</li>
+                                    </ul> 
+                                    <h6>Accomplishments</h6>
+                                    <ul>
+                                        <li>Significant performance improvement internally and for clients when loading store metada</li>
+                                        <li>Functioning app allows researchers to take advantage of more complex sentiment libraries than previously used manually generated libraries</li>
+                                        <li>Product owner is now able to navigate Google Anayltics effectively to reach better understanding of the customer</li>
+                                    </ul>
                                 </div>
-
-                                <div class=" info">
-                                    <div  id="cinfo">
-                                                I have been learning C for a year and half, through three courses. I have used C and C++ to implement algorithms like <ul><li>Merge Sort</li><li>Dijkstra's</li><li>Prim's</li><li>Kruskals</li> and more.</ul>I also have used these languages to implement data structures like <ul><li>linked lists</li><li>Complex directed and undirected graphs</li><li>and search trees.</li></ul>
+                                <div class="card-action">
+                                    <a href="https://www.smg.com/">More About SMG</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Kolu</span>
+                                    <span class="role">iOS Developer/Tech Advisor</span>
+                                    <em>Mobile application that allows travellers to find local guides with like-minded interests in new cities</em>
+                                    <br>
+                                    <span class="white-text">September 2017 - May 2018</span>
+                                    <br>Native Swift, Mixpanel, Alamofire
+                                    <h6>Development</h6>
+                                    <ul>
+                                        <li>Laid the groundwork for implementation of designs and connection with APIs</li><li>Worked with a remote developer from another country on front and backend</li>
+                                        <li>Brought tech and user insights to weekly meetings</li>
+                                    </ul> 
+                                    <h6>Accomplishments</h6>
+                                    <ul>
+                                        <li>App launch within five months of beginning the project</li>
+                                        <li>Implemented tracking via Mixpanel that shaped marketing campaigns and front end design thanks to insights into how users interact with the app</li>
+                                    </ul>
+                                </div>
+                                <div class="card-action">
+                                    <a href="koluapp.com">More About Kolu</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">CIVA Lab, UM-C</span>
+                                    <span class="role">Undergraduate Research Assistant</span>
+                                    <em>Research Lab with a focus on computer vision and image analysis</em>
+                                    <br>
+                                    <span class="white-text">January 2017 - Present</span>
+                                    <h6>Development</h6>
+                                    <ul>
+                                        <li>Set up and worked on two embedded systems: Nvidia Jetson TK1 and TX1</li><li>Undertook a project developing software that used GPU programming to quickly warp images according to matrices calculated using camera parameters</li>
+                                    </ul> 
+                                    <h6>Accomplishments</h6>
+                                    <ul>
+                                        <li>Achieved much faster-than-real-time image warp speeds, showing potential of gpu computing for real-time computer vision tasks aboard drones</li>
+                                        <li>Published paper detailing this research to the conference <b>Geospatial Informatics, Motion Imagery, and Network Analytics VIII</b></li>
+                                    </ul>
+                                </div>
+                                <div class="card-action">
+                                    <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10645/106450H/Real-time-geoprojection-and-stabilization-on-airborne-GPU-enabled-embedded/10.1117/12.2309796.short?SSO=1&tab=ArticleLink">My Paper</a>
+                                    <br>
+                                    <a href="http://cell.missouri.edu/">CIVA Lab</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">University of Missouri</span>
+                                    <span class="role">Course Teaching Assistant</span>
+                                    <em></em>
+                                    <br>
+                                    <span class="white-text">May 2017 - Aug 2017</span>
+                                    <h6>Work</h6>
+                                    <ul>
+                                        <li>Taught myself Python to assist students taking an online intro to computer science course, and grade their assignments</li>
+                                        <li>Utilized my self-taught iOS knowledge to help students taking an online introduction to Swift course, grading their assignments as well </li>
+                                    </ul> 
+                                    <h6>Takeaways</h6>
+                                    <ul>
+                                        <li>Learned how to better teach new programmers a language</li>
+                                        <li>Solidified Swift concepts for myself while teaching them</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
+                </section>
+                
+                <section id="skills" class="section scrollspy">
+                    <h3 class="page-title blue-grey"> Skills</h3>
+                    <div class="container">
+                    <div class="row">
+                    <div class="col s12 m12 white-text">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Advanced skill and/or Industry Experience</span>
+                              <div class="row text-center">
+                                <div class="col s4 m2"><img alt="" src="/img/swift2.png" class="responsive-img">Swift</div>
+                                <div class="col s4 m2"><img alt="" src="/img/js.png" class="responsive-img">Javascript</div>
+                                <div class="col s4 m2"><img alt="" src="/img/angular.svg" class="responsive-img">AngularJS</div>
+                                <div class="col s4 m2"><img alt="" src="/img/csharp.png" class="responsive-img">C#</div>
+                                <div class="col s4 m2"><img alt="" src="/img/sqlserver.png" class="responsive-img">Sql Server</div>
+                              </div>
+                            <div class="row text-center">
+                                <div class="col s4 m2"><img alt="" src="/img/html5.png" class="responsive-img">HTML</div>
+                                <div class="col s4 m2"><img alt="" src="/img/less.svg" class="responsive-img"><span class="">CSS/Less</span></div>
+                                <div class="col s4 m2"><img alt="" src="/img/java.png" class="responsive-img">Java</div>
+                                <div class="col s4 m2"><img alt="" src="/img/ga.png" class="responsive-img">Google Analytics</div>
+                                <div class="col s4 m2"><img alt="" src="/img/mixpanel.png" class="responsive-img">Mixpanel</div>
+                            </div>
+                      </div>  
+                    </div> 
+                        <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Intermediate Skill and/or Project Experience</span>
+                                    <div class="row text-center">
+                                        <div class="col s4 m2"><img alt="" src="/img/c.png" class="responsive-img">C</div>
+                                        <div class="col s4 m2"><img alt="" src="/img/cpp.png" class="responsive-img">C++</div>
+                                        <div class="col s4 m2"><img alt="" src="/img/php.png" class="responsive-img">PHP</div>
+                                        <div class="col s4 m2"><img alt="" src="/img/python.png" class="responsive-img">Python</div>
+                                        <div class="col s4 m2"><img alt="" src="/img/materialize.png" class="responsive-img">Materialize</div>
+                                        <div class="col s4 m2"><img alt="" src="/img/bootstrap.svg" class="responsive-img">Bootstrap</div>
                                     </div>
-                                </div>
-
-                            </div>
-                    </div>
-
-                    <div class="col-sm-4 ">
-
-                        <div id="swift" class="skills-box" >
-
-                            <p>Swift</p>
-                            <div class="holdpic">
-                                <img class="icon" src="img/swift2.png" alt="Swift">
-                            </div>
-                            <div class=" info">
-                                <div  id="swiftinfo">
-                                    <p>
-                                    I learned Swift at a rapid pace for a competition held by the Reynold's Journalism Institute at Mizzou. Our team of interdisciplinary students was one of four chosen to develop an app idea that helps journalism and uses AI. In May, we won the competition and were rewarded with a trip to San Francisco where we talked to tech companies, journalism outlets, and a start-up accelerator called Matter. We still hold meetings and plan on competing in 2017-2018 as well.
-                                    I have also worked on a short project for a professor using Swift. I am going to do research with a professor focused around Swift servers.
-                                    I am the leader of the iOS special interest group, teaching other students the basics of Swift and helping them with problems they run into in development.
-
-                                    </p>
-<!--                                            <p>I am learning Swift at a rapid pace so for a competition being held by the Renold's Journalism Institute at Mizzou. <a href=" https://www.rjionline.org/stories/four-teams-tap-ai-in-10th-annual-rji-student-competition" target="_blank">Here is an article about the competition. </a> My team was one of four interdisciplinary teams chosen to develop an app to present in May.</p>-->
-                                </div>
                             </div>
                         </div>
-
-
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="skills-box" id="web" >
-
-                            <p>Web</p>
-                            <div class="holdpic">
-                                <img class="icon" src="img/webstuff.png"  alt="HTML, CSS, JS">
-
-                            </div>
-                            <div class=" info">
-                                <div class=" panel-body" id="webinfo">
-                                            <p>I have learned Web development for a course focused on  web development , as well as for a course based on databases. I have also learned from creating web apps at hackathons. I have found that it is a fast and easy way to build apps, and put ideas to work. I have worked a lot with JavaScript at the three Hackathons I have attended. One project was seen to fruition, and it can be found below!</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row text-left">
-
-
-
-
-                </div>
-<!--
-                <div class="row text-center">
-                    <div class="col-xs-12">
-                        <a  id="excButton"class="btn btn-default" href="Excusify/excuso.html" target="_blank"><h1>Click Here to go to my hackathon project, Excusify</h1></a>
-                    </div>
-                </div>
--->
-                <div class="row text-center">
-                    <div class="col-xs-12">
-                        <br>
-                        <a class="btn btn-default page-scroll" href="#about"><span class="glyphicon glyphicon-arrow-down"></span>More about me<span class="glyphicon glyphicon-arrow-down"></span></a>
-
-                    </div>
-
-                </div>
-
-
-            </section>
-
-
-<!--
-        <section id="creative">
-            <div class="row">
-                <div>
-                    <div class="col-xs-12">
-                        <h1 id="creativeTitle">Creative Endeavors</h1>
-                    </div>
-
-                </div>
+                </div> 
             </div>
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" href="#vid">
-                            <div class="panel-heading"><h3 class="panel-title">High School Senior Year IB Film project</h3></div>
-                        </a>
-                        <div id="vid" class="collapse panel-body">
-                            <div>
-                            <p>For my final film in my high school IB Film class, I worked with three others in a group to come up with something powerful and unique. I did all of the editing for this film, and I am fairly proud of how it turned out, especially considering how challenging it was to work with the music. </p>
-
-                            </div>
-
-                            <div  class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LLSRBaCcx2A" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-
-                        <a id="mapclick" data-toggle="collapse" href="#dnd">
-                            <div class="panel-heading"><h3 class="panel-title">Dungeons & Dragons</h3></div>
-                        </a>
-                        <div id="dnd" class="collapse panel-body">
-
-                            <p>I run a dungeons and dragons game with my friends, creating a story and world for them to interact with. This is the map I made for them. They currently reside On the coast of Serikholm, the norse-styled nation of the north. I have written a lot of story and lore, and every time we play requires a lot of preparation.</p>
-
-                            <img id="map" class="img-responsive img-rounded center-block" src="img/world.jpg" alt="The World">
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
-            <div class="row text-center">
-                    <div class="col-xs-12">
-
-                        <a class="btn btn-default page-scroll" href="#about"><span class="glyphicon glyphicon-arrow-down"></span>More about me<span class="glyphicon glyphicon-arrow-down"></span></a>
-
-                    </div>
-
-                </div>
-
         </section>
+<!--
+            
+                <section id="projects" class="section scrollspy">
+                    <h3 class="page-title blue-grey"> Projects</h3>
+                    <div class="container">
+                    <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Informator</span>
+                            <span class="role"> iOS Development & Business Strategy</span>
+                          <em></em>
+                        </div>
+                      </div>
+                    </div>
+                    </div> 
+                    <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Excusify</span>
+                            <span class="role"> Web Development</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Link to Excusify</a>
+                        </div>
+                      </div>
+                    </div>
+                    </div> 
+                    <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Surf</span>
+                            <span class="role">Business Strategy</span>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                </section> 
 -->
-        <section id="about">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Evan Teters</h1>
-                    <div class="media">
-                      <div class="media-left">
-
-                          <span class="media-object glyphicon glyphicon glyphicon-briefcase">
-                          </span>
-
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">Work</h4>
-                            In addition to the experiences mentioned above, I also have significant work experience.
-                          <br><br><br>I have been doing research under Dr. Palanniappan, the Department chair of the Electrical Engineering and Computer Science department. I chose to work with him out of interest in learning more about computer vision. I have been implementing code designed by other members of the lab on GPUs. I have used OpenCV and the computer vision library NPP to learn more about computer vision and C++ programming.
-                          <br><br><br>I am also a team member of Kolu, a start-up based out of Columbia. We have been working to design and market an app to encourage and personalize tourism while bringing people together across the world. I am very excited to continue to develop the iOS version of the app.
-                          <br><br><br>I also TA'ed for two online courses in the summer of 2017, which was a great experience to learn how people learn to code and learn Python myself at the same time.
-
-
-
-
-
-                      </div>
-                    </div>
-
-
-<!--                    EDUCATION -->
-                    <div class="media">
-                      <div class="media-left">
-
-                          <span class="media-object glyphicon glyphicon-education">
-                          </span>
-
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">Education</h4>
-                            I attend the University of Missouri in Columbia.
-                          <br>I am a junior pursuing a Bachelors in Computer Science and a minor in math
-                          <br>Graduating 2019
-                          <br>Relevant classes taken:
-                          <ul>
-                            <li>Computer Science 1050,2050: Introductions to Computer Science and the <b>C</b> language</li>
-                            <li>CS 3050,4050: More advanced <b>C/C++</b> and study of important algorithms</li>
-                            <li>CS 2830: Introduction to Web Development: <b>HTML, CSS, Javascript, PHP, MySQL</b> all covered.
-                            </li>
-                              <li>CS 3330: Object Oriented Programming. Using Java to learn and apply object oriented programming</li>
-                              <li>CS 3380: Database Aplications and Info Systems. As a team, we used PHP and web elements to create a website that used a mySQL database</li>
-                              <li>CS 4320: Software Engineering. An introduction to software engineering concepts like Agile programming. We will be working with teams to complete a project, using industry standards for software engineering methodologies. </li>
-                            <li>Calculus 1-3</li>
-                              <li>Discrete Math, Statistics (4710)</li>
-                          </ul>
-                          <br>
-<!--                          Relevant classes I am taking now:-->
-
-
-
-
-
-                      </div>
-                    </div>
-<!--             ~~~~~~~~~~~~CONTACT INFO ~~~~~~~~~~   -->
-                  <div class="media">
-                      <div class="media-left">
-
-                          <span class="media-object glyphicon glyphicon-envelope">
-                          </span>
-
-                      </div>
-                      <div class="media-body">
-                        <h4 class="media-heading">Contact Me</h4>
+                
+                <section id="education" class="section scrollspy">
+                    <h3 class="page-title blue-grey"> Education</h3>
+                    <div class="container">
+                    <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">University of Missouri-Columbia</span>
+                            B.S. in Computer Science, Minor in Math
+                          <br><em>Topics Covered:</em>
                             <ul>
-
-                                <li>evan@teters.net</li>
-                                <li><a href="tel:417-841-7263">(417)841-7263</a></li>
-
-
-                          </ul>
+                                <li>Programming with C, pointers and data structures</li>
+                                <li>Essential Algorithms</li>
+                                <li>Assembly Language Programming</li>
+                                <li>Object Oriented Programming</li>
+                                <li>The basics of networking and the internet</li>
+                                <li>Software Engineering principles: Agile methodologies</li>
+                            </ul>
+                        </div>
                       </div>
                     </div>
+                    </div> 
+                    </div>
+                </section>
+              
+                <section id="contact" class="section scrollspy">
+                    <h3 class="page-title blue-grey"> Contact</h3>
+                    <div class="container">
+                    <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            
+                            <ul>
+                                <li><a href="mailto:evan@teters.net">evan@teters.net</a></li>
+                                <li><a href="https://github.com/eteters">github.com/eteters</a></li>
+                                <li><a href="https://www.linkedin.com/in/evan-teters-693386150">linkedin.com/in/evan-teters-693386150</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                    </div> 
+                    </div>
+                </section>
+            
+            
+</main>
 
-                </div>
-            </div>
-        </section>
-        <!-- /.row -->
-
-
-    </div>
-    <!-- /.container -->
-
-
-
-</body>
-
-</html>
+      
+    </body>
+  </html>

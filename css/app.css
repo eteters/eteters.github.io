@@ -1,0 +1,101 @@
+main {
+	padding-left: 190px;
+}
+.sidenav {
+	width: 190px;
+}
+nav {
+	background: white;
+	box-shadow: none;
+	height: 0;
+}
+nav i {
+	padding: 0 15px;
+	position: relative;
+	top: 5px;
+}
+.full-height {
+	height: 100vh;
+}
+.card .role {
+    position: relative;
+    right: initial;
+    top: initial;
+    font-size: 1.25rem;
+      position: absolute;
+      right: 38px;
+      top: 35px;
+	}
+
+#skills .col img.responsive-img {
+	margin: 0 auto;
+	max-height: 100px;
+	padding-bottom: 10px;
+	text-align: center;
+	vertical-align: middle;
+    display: table-cell;
+}
+.text-center {
+	text-align: center;
+}
+.card ul li {
+	line-height: 200%;
+	list-style-type: disc;
+	margin-left: 24px;
+}
+.user-view{
+    line-height: 150%;
+}
+.user-view a{
+    color: #ffa726
+}
+.navName{
+    font-size: 20pt;
+}
+.navTitle{
+    font-size: 10pt;
+    
+}
+.sidenav .user-view {
+    padding: 16px;
+}
+.sidenav li>a{
+    color: #ffa726;
+}
+section>h3{
+    padding: 10px;
+    color: white;
+} 
+section{
+    position: relative;
+}
+.container{
+    margin: 0 auto;
+}
+#contact a {
+    color: #ffa726;
+    font-size: 20px;
+    list-style-type: none;
+}
+#contact ul{
+    list-style-type: none;
+}
+@media(max-width: 992px) {
+    
+	nav {
+		background: #546e7a;
+		height: 64px;
+        position: fixed;
+        z-index: 2;
+    }
+    .hide-on-small-only {
+        height: 0;
+    }
+    main {
+	   padding-left: 0;
+        padding-top: 64px;
+    }
+    #slide-out{
+        z-index: 3;
+    }
+}
