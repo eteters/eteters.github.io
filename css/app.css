@@ -10,7 +10,7 @@ nav {
 	height: 0;
 }
 nav i {
-	padding: 0 15px;
+	padding: 0 2px;
 	position: relative;
 	top: 5px;
 }
@@ -98,4 +98,9 @@ section{
     #slide-out{
         z-index: 3;
     }
+    .card .role {
+   
+    font-size: 1.25rem;
+      position: inherit;
+	}
 }
