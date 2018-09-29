@@ -77,6 +77,11 @@ section{
     font-size: 20px;
     list-style-type: none;
 }
+#links a {
+    color: #ffa726;
+    font-size: 20px;
+    list-style-type: none;
+}
 #contact ul{
     list-style-type: none;
 }
